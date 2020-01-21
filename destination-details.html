@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
+    <meta name="csrf-token" content="2Gg9TkMtiIgiwAQxgm7mFqD0Fv2CEfNMDW8OaGpw">
+    <link rel="icon" type="image/png" href="http://cvc.vacations/uploads/0000/1/2019/12/28/final-logo-03-1-150.png" />
     
-    <title>Destinations - Cadence Vacations Center</title>
+    <meta name="google-site-verification" content="cXQuYnA8XdF73KGgCE2FnWcYKDIMB-Cgny1cP6M-QCw" />
+
+    <title> Cadence Vacations Center</title>
     <meta name="description" content=""/>
-
-
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="libs/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="libs/ionicons/css/ionicons.min.css" rel="stylesheet">
@@ -43,14 +45,16 @@
     gtag('config', 'UA-154435778-1');
     </script>
 
-        
+        <link href="module/tour/css/tour.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="libs/ion_rangeslider/css/ion.rangeSlider.min.css"/>
+    
     <style id="custom-css">
     body{
-                                      font-family:;
+                                      /* font-family:;
                               color:;
                               font-size:;
                               line-height:;
-                              font-weight:;
+                              font-weight:; */
                         }
     a,
     .bravo-news .btn-readmore,
@@ -247,7 +251,25 @@ a.bravo-logo img{
 
 .bravo_topbar .topbar-left .slogin{
     display:inline-block;
-    font-weight:bolder
+}
+.destination-content h3{
+        margin: 10px;
+    font-size: 22px;
+    color: #777;
+    margin-top: 30px;
+}
+.destination-content h4{
+        margin: 10px;
+    font-size: 18px;
+    color: #777;
+    margin-top: 30px;
+}
+.destination-content p,li{
+    margin: 10px;
+    font-size: 14px;
+    color: #999;
+    margin-left: 20px;
+    list-style-type: none;
 }
 </style>
 
@@ -264,7 +286,7 @@ a.bravo-logo img{
                 </a>
 
         
-                 <h5  class="slogin">  Your Luxury DMC in Egypt </h5>
+                 <h6  class="slogin">  Your Luxury DMC in Egypt </h6>
             </div>
 
             <div>
@@ -293,21 +315,11 @@ a.bravo-logo img{
                         </li>
                     </ul>
                                   <ul class="topbar-items">
-                                            <li class="login-item dropdown">
-                            <a href="#" data-toggle="dropdown" class="login">Hi,  
-                                <i class="fa fa-angle-down"></i>
-                            </a>
-                            <ul class="dropdown-menu text-left">
-                                <li><a href="http://cvc.vacations/user/profile"><i class="icon ion-md-construct"></i> My profile</a></li>
-
-                                                                    <li class="menu-hr"><a href="http://cvc.vacations/admin"><i class="icon ion-ios-ribbon"></i> Dashboard</a></li>
-                                                                <li class="menu-hr">
-                                    <a  href="#" onclick="event.preventDefault(); document.getElementById('logout-form-topbar').submit();"><i class="fa fa-sign-out"></i> Logout</a>
-                                </li>
-                            </ul>
-                            <form id="logout-form-topbar" action="http://cvc.vacations/logout" method="POST" style="display: none;">
-                                <input type="hidden" name="_token" value="rpIsegRg9AWQquQ8f0S0UzRjdI51mdPWVAwziRyx">
-                            </form>
+                                            <li class="login-item">
+                            <a href="#login" data-toggle="modal" data-target="#login" class="login">Login</a>
+                        </li>
+                        <li class="signup-item">
+                            <a href="#register" data-toggle="modal" data-target="#register" class="signup">Sign Up</a>
                         </li>
                                 </div>
               
@@ -335,129 +347,536 @@ a.bravo-logo img{
         <div class="user-profile">
             <div class="b-close"><i class="icofont-scroll-left"></i></div>
             <div class="avatar">
-                                                                                <i class="icofont-user-alt-2"></i>
-                                                </div>
+                                    <i class="icofont-user-alt-2"></i>
+                            </div>
             <ul>
                                     <li>
-                        <a href="http://cvc.vacations/user/profile">
-                            <i class="icofont-user-suited"></i> Hi,  
-                        </a>
+                        <a href="#login" data-toggle="modal" data-target="#login" class="login">Login</a>
                     </li>
                     <li>
-                        <a href="http://cvc.vacations/user/profile">
-                            <i class="icon ion-md-construct"></i> My profile
-                        </a>
-                    </li>
-                                            <li>
-                            <a href="http://cvc.vacations/admin"><i class="icon ion-ios-ribbon"></i> Dashboard</a>
-                        </li>
-                                        <li>
-                        <a  href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <i class="fa fa-sign-out"></i> Logout
-                        </a>
-                        <form id="logout-form" action="http://cvc.vacations/logout" method="POST" style="display: none;">
-                            <input type="hidden" name="_token" value="rpIsegRg9AWQquQ8f0S0UzRjdI51mdPWVAwziRyx">
-                        </form>
+                        <a href="#register" data-toggle="modal" data-target="#register" class="signup">Sign Up</a>
                     </li>
                             </ul>
         </div>
         <div class="g-menu">
             <ul class="main-menu menu-generated"><li class=""><a  target="" href="/" >Home</a></li><li class="   "><a  target="" href="/page/destinations" >Destinations <i class="fa fa-angle-down"></i></a><ul class="children-menu menu-dropdown"><li class=" "><a  target="" href="http://cvc.vacations/location/cairo" >Cairo</a></li><li class="  "><a  target="" href="http://cvc.vacations/location/luxor" >Luxor</a></li><li class="  "><a  target="" href="http://cvc.vacations/location/aswan-1" >Aswan</a></li><li class=" "><a  target="" href="http://cvc.vacations/location/alexandria-1" >Alexandria</a></li><li class=" "><a  target="" href="http://cvc.vacations/location/sharm-el-sheikh" >Sharm El-Sheikh</a></li><li class=" "><a  target="" href="http://cvc.vacations/location/sahl-hasheesh" >Sahl Hasheesh</a></li></ul></li><li class="    "><a  target="" href="/tour" >Egypt Packages</a></li><li class="  "><a  target="" href="http://cvc.vacations/page/about-us" >About Us</a></li><li class=""><a  target="" href="/contact" >Contact Us</a></li></ul>        </div>
     </div>
-</div>                    <div class="page-template-content">
+</div>            <div class="bravo_search_tour">
+        <div class="bravo_banner"  style="background-image: url(http://cvc.vacations/uploads/0000/1/2019/12/28/cairo.jpg);padding: 212px;"  >
             <div class="container">
-    <div class="bravo-list-locations">
-        <div class="title">
-            Destinations
+                <h1>
+                    
+                </h1>
+            </div>
         </div>
-        <div class="list-item">
+        
+        <div class="container">
+            
+<html>
+<head>
+</head>
+<body>
+<div class="container">
+    <div class="destination-content">
+        <h3>Cairo</h3>
+        <p>
+            
+            <li>
+                Cairo or Al-Qahira (the victorious) city in the Arabic language and 'the city of a thousand minarets' is the capital of
+                the charming Egypt. It is one of the largest cities in Africa and the Middle East.
+            </li>
+            <li>
+                Cairo's location on the eastern shore of the Nile River creates its unique magic. In addition, it has an extraordinary
+                history throughout the Ancient Egyptian era, the Islamic and the Coptic age, the old and modern history.
+            </li>
+            <br>
+            <h4>Pyramids of Giza</h4>
+            <li>
+                Located on Giza plateau are the three iconic pyramids of Egypt belonging to the kings of the fourth dynasty. Starting
+                with the one and only standing monument among the seven wonders of the ancient world, The Great Pyramid of Khufu. Its
+                size along with the interior design and the so called "Grand Gallery" are the main reasons why the Great pyramid was
+                selected to be the utmost man-made building all over the world.
+            </li>
+            <li>
+                The second chief monument on the Giza plateau is The Pyramid of Kharfa. It is the second largest of the Ancient Egyptian
+                pyramids known for the well preserved pyramid complex. The so called valley temple and the Great Sphinx are considered
+                part of Khafra's pyramid complex.
+            </li>
+            
+            <li>
+                The third and smallest building in the plateau is The Pyramid of Menkawra. It served as the burial place of king
+                Menkawra of the fourth dynasty
+            </li>
+           
+            <h4>The Great Sphinx</h4>
+            <li>
+                Cut from one huge piece of limestone, the statue of the great sphinx is considered one of the largest and oldest statues
+                in the world. The 20 meter- tall structure is a mythical creature taking the body of a lion and the face of a human; in
+                this case it is highly recommended it belongs to King Khafre. On one hand, the great sphinx's function is said to guard
+                the area of the three pyramids, while on the other hand it is a symbolization of power, strength and wisdom of the
+                Egyptian king.
+            </li>
+            <br>
+            <h4>Memphis</h4>
+            <li>
+                It is situated to the south west of Giza pyramids, and is considered the 1st capital of Ancient Egypt. The ancient city
+                hosts a number of breathtaking monuments such as: the colossi of Ramases II, the alabaster sphinx and other statues.
+            </li>
+            <br>
+            <h4>The Pyramid Complex of Sakkara</h4>
+            <li>
+                Built by King Djoser of Old Kingdom, the step pyramid of Sakkara is the earliest colossal stone building in Ancient
+                Egypt. Despite the fact that Sakkara isn't famous as the pyramids of Giza, but it is so important to witness the
+                evolution of pyramids construction throughout the history.
+            </li>
+            <br>
+            <h4>Khan El-Khalili</h4>
+            <li>
+                It is a famous bazaar in the historic center of Cairo. The ancient market is as old as the 14th century, and is
+                characterized by the manufacture of a unique handicrafts and souvenirs made by the Egyptian talented artisans.
+            </li>
+            <br>
+            <h4>The Citadel of Saladin</h4>
+            <li>
+                It is constructed by the legendary army leader Saladin in the 13th century. The citadel area encompasses several museums
+                and monuments from different eras such as: the great alabaster Mosque of Mohamed Ali, the Royal Carriage Museum and
+                Al-Gawhara Palace Museum.
+            </li>
+            <br>
+            <h4>Old Cairo</h4>
+            <li>
+                Also known as Coptic Cairo or the Center of Religions is situated at the location of ancient Babylon dating back to the
+                6th century BC. The area is known to be the shelter place of the Holy Family during their flight to Egypt seeking
+                refugee from the Roman king Herod who wanted to kill Jesus the baby.
+            </li>
+            
+            <li>
+                Nowadays the area encompasses number of Coptic Religious buildings which are: The Hanging Church, the Greek Church of
+                St. George, the cemetery of the Greeks, the Monastery of St. George, the Wedding Hall of St. George, the Church of Abu
+                Serga, the Church of St. Barbara, the Tomb of Ibrahim Al-Gohary, the Church of the Virgin -Qasriyet Al-Rayhan-, and the
+                Coptic Museum.
+            </li>
+            
+            <li>
+                In addition to the Coptic monuments, there are the synagogue of Ben Ezra and the Mosque of Amr Ibn Al-Aas very near to
+                the complex.
+            </li>
+            <br>
+            <h4>Mosque of Amr Ibn Al-Aas </h4>
+            <li>
+                The Mosque was founded in 642 AD by the Arab commander who introduced Islam to Egypt, Amr Ibn Al-Aas. The mosque acted
+                as the center of his newly founded Egyptian capital, Al-Fustat. It is located near to the Coptic complex in the heart of
+                Old Cairo.
+            </li>
+            
+            <li>
+                Despite the fact that most of its original structure has been renovated, the historical significance of the building as
+                the first mosque on the continent of Africa still fascinates lots of tourists from all over the world!
+            </li>
+            <br>
+            <h4>Grand Egyptian Museum (GEM)</h4>
+            <li>
+            Located approximately two kilometers from Giza pyramids, the GEM is a planned museum of the most precious ancient
+            Egyptian artefacts. It is still under construction and is scheduled to open in 2020. The museum is described as the
+            largest archaeological museum in the world!
+ 
+            </li>
+            
+            <li>
+                The estimated floor area is 480,000 square meters. It is planned that the museum will include the latest interpretation
+                technologies comprising virtual reality. It will embrace conference center, children's museum, training center and
+                workshops similar to the Ancient Egyptian places. Stay Tuned for the opening ceremony!
+            </li>
+            <br>
+            <h4>Wadi Degla Protectorate</h4>
+            <li>
+                In 1999, Wadi Degla was announced to be a desert land protected area by the Egyptian Environmental Affairs Agency. It
+                covers an area of about 60 kilometers and situated just 10 kilometers away from Cairo.
+
+            </li>
+            
+            <li>
+                The protectorate passes through the limestone rocks remains from the marine environment during the Eocene Epoch 60
+                million years ago; this is why the vicinity is full of fossils.
+            </li>
+            
+            <li>
+                The valley around the high rocks has a group of animals including mammals and if you are lucky you will pass by some of
+                them during your tour. Visiting Wadi Degla Protectorate as part of your vacation in Cairo is special in all ways! It
+                offers a unique experience where you will enjoy the silence of nature and the beauty of rocks.
+            </li>
+            <br>
+            <h4>Al-Azhar Park</h4>
+            <li>
+                It is tricky to imagine how the location of today's Al-Azhar park was once a mountain of debris! A tremendous effort was
+                done by Aga Khan Trust for Culture Network aiming at creating a great public space in the heart of Cairo. A total of 30
+                million dollars was assigned to this project. Qualified local architects and urban development offices participated in
+                inventing this amazing transformation. Make sure to take some time and dine in one of the nice restaurants with the
+                astonishing view of Cairo and Saladin Citadel just in front of you!
+            </li>
+            <br>
+        </p>
+
+    </div>
+</div>
+</body>
+</html>
+
+            
             <div class="row">
-                                    <div class="col-lg-8">
-                        <div class="destination-item ">
-    <a href="http://cvc.vacations/hotel?location_id=20">
-        <div class="image"  style="background: url(http://cvc.vacations/uploads/0000/1/2019/12/28/cairo-600.jpg)"  >
-            <div class="effect"></div>
-            <div class="content">
-                <h4 class="title">Cairo</h4>
-                <div class="desc">8 Hotels</div>
+    
+    <div class="col-lg-9 col-md-12">
+        <div class="bravo-list-item">
+            <div class="topbar-search">
+                <div class="text">
+                    8 Hotel found
+                </div>
+                <div class="control">
+
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="row">
+                                                                        <div class="col-lg-4 col-md-6">
+                                <div class="item-tour ">
+        <div class="thumb-image ">
+                <a  target="_blank"  href="seasons.html">
+            
+            <img class='img-responsive lazy'  data-src=http://cvc.vacations/uploads/0000/1/2019/12/28/mena-house-5-600.jpg  alt=''>
+        </a>
+    </div>
+    <div class="location">
+                    <i class="icofont-paper-plane"></i>
+            Cairo
+            </div>
+    <div class="item-title">
+        <a  target="_blank"  href="seasons.html">
+            Marriott Mena House
+        </a>
+    </div>
+        <div class="service-review tour-review">
+        <div class="list-star">
+            <ul class="booking-item-rating-stars">
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+            </ul>
+            <div class="booking-item-rating-stars-active" style="">
+                <ul class="booking-item-rating-stars">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                </ul>
             </div>
         </div>
-    </a>
-</div>                    </div>
-                                    <div class="col-lg-4">
-                        <div class="destination-item ">
-    <a href="http://cvc.vacations/hotel?location_id=19">
-        <div class="image"  style="background: url(http://cvc.vacations/uploads/0000/1/2019/12/28/luxorr-600.jpg)"  >
-            <div class="effect"></div>
-            <div class="content">
-                <h4 class="title">Luxor</h4>
-                <div class="desc">9 Hotels</div>
+        
+    </div>
+
+</div>
+                            </div>
+                                                    <div class="col-lg-4 col-md-6">
+                                <div class="item-tour ">
+        <div class="thumb-image ">
+                <a  target="_blank"  href="seasons.html">
+            
+            <img class='img-responsive lazy'  data-src=http://cvc.vacations/uploads/0000/1/2019/12/28/33nr-nileritz-1-1024x480-600.jpg  alt=''>
+        </a>
+    </div>
+    <div class="location">
+                    <i class="icofont-paper-plane"></i>
+            Cairo
+            </div>
+    <div class="item-title">
+        <a  target="_blank"  href="seasons.html">
+            The Nile Ritz-Carlton
+        </a>
+    </div>
+        <div class="service-review tour-review">
+        <div class="list-star">
+            <ul class="booking-item-rating-stars">
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+            </ul>
+            <div class="booking-item-rating-stars-active" style="">
+                <ul class="booking-item-rating-stars">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                </ul>
             </div>
         </div>
-    </a>
-</div>                    </div>
-                                    <div class="col-lg-4">
-                        <div class="destination-item ">
-    <a href="http://cvc.vacations/hotel?location_id=18">
-        <div class="image"  style="background: url(http://cvc.vacations/uploads/0000/1/2019/12/28/anakato-1-600.jpg)"  >
-            <div class="effect"></div>
-            <div class="content">
-                <h4 class="title">Aswan</h4>
-                <div class="desc">2 Hotels</div>
+        
+    </div>
+
+</div>
+                            </div>
+                                                    <div class="col-lg-4 col-md-6">
+                                <div class="item-tour ">
+        <div class="thumb-image ">
+                <a  target="_blank"  href="seasons.html">
+            
+            <img class='img-responsive lazy'  data-src=http://cvc.vacations/uploads/0000/1/2019/12/28/le-meridien-pyramids-1-600.jpg  alt=''>
+        </a>
+    </div>
+    <div class="location">
+                    <i class="icofont-paper-plane"></i>
+            Cairo
+            </div>
+    <div class="item-title">
+        <a  target="_blank"  href="seasons.html">
+            Le Méridien Pyramids Hotel &amp; Spa Cairo
+        </a>
+    </div>
+        <div class="service-review tour-review">
+        <div class="list-star">
+            <ul class="booking-item-rating-stars">
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+            </ul>
+            <div class="booking-item-rating-stars-active" style="">
+                <ul class="booking-item-rating-stars">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                </ul>
             </div>
         </div>
-    </a>
-</div>                    </div>
-                                    <div class="col-lg-4">
-                        <div class="destination-item ">
-    <a href="http://cvc.vacations/hotel?location_id=17">
-        <div class="image"  style="background: url(http://cvc.vacations/uploads/0000/1/2019/12/28/alexandria-2-600.jpg)"  >
-            <div class="effect"></div>
-            <div class="content">
-                <h4 class="title">Alexandria</h4>
-                <div class="desc">2 Hotels</div>
+        
+    </div>
+
+</div>
+                            </div>
+                                                    <div class="col-lg-4 col-md-6">
+                                <div class="item-tour ">
+        <div class="thumb-image ">
+                <a  target="_blank"  href="seasons.html">
+            
+            <img class='img-responsive lazy'  data-src=http://cvc.vacations/uploads/0000/1/2019/12/28/kempiniski-600.jpg  alt=''>
+        </a>
+    </div>
+    <div class="location">
+                    <i class="icofont-paper-plane"></i>
+            Cairo
+            </div>
+    <div class="item-title">
+        <a  target="_blank"  href="seasons.html">
+            Kempinski Nile Hotel Cairo
+        </a>
+    </div>
+        <div class="service-review tour-review">
+        <div class="list-star">
+            <ul class="booking-item-rating-stars">
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+            </ul>
+            <div class="booking-item-rating-stars-active" style="">
+                <ul class="booking-item-rating-stars">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                </ul>
             </div>
         </div>
-    </a>
-</div>                    </div>
-                                    <div class="col-lg-4">
-                        <div class="destination-item ">
-    <a href="http://cvc.vacations/hotel?location_id=16">
-        <div class="image"  style="background: url(http://cvc.vacations/uploads/0000/1/2019/12/28/sharm-l-sheikh-600.jpg)"  >
-            <div class="effect"></div>
-            <div class="content">
-                <h4 class="title">Sharm El-Sheikh</h4>
-                <div class="desc">3 Hotels</div>
+        
+    </div>
+
+</div>
+                            </div>
+                                                    <div class="col-lg-4 col-md-6">
+                                <div class="item-tour ">
+        <div class="thumb-image ">
+                <a  target="_blank"  href="seasons.html">
+            
+            <img class='img-responsive lazy'  data-src=http://cvc.vacations/uploads/0000/1/2019/12/28/hilton-zmalek-600.jpg  alt=''>
+        </a>
+    </div>
+    <div class="location">
+                    <i class="icofont-paper-plane"></i>
+            Cairo
+            </div>
+    <div class="item-title">
+        <a  target="_blank"  href="seasons.html">
+            Hilton Cairo Zamalek Residence
+        </a>
+    </div>
+        <div class="service-review tour-review">
+        <div class="list-star">
+            <ul class="booking-item-rating-stars">
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+            </ul>
+            <div class="booking-item-rating-stars-active" style="">
+                <ul class="booking-item-rating-stars">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                </ul>
             </div>
         </div>
-    </a>
-</div>                    </div>
-                                    <div class="col-lg-4">
-                        <div class="destination-item ">
-    <a href="http://cvc.vacations/hotel?location_id=15">
-        <div class="image"  style="background: url(http://cvc.vacations/uploads/0000/1/2019/12/28/sahl-hasheesh4-600.jpg)"  >
-            <div class="effect"></div>
-            <div class="content">
-                <h4 class="title">Sahl Hasheesh</h4>
-                <div class="desc">1 Hotel</div>
+        
+    </div>
+
+</div>
+                            </div>
+                                                    <div class="col-lg-4 col-md-6">
+                                <div class="item-tour ">
+        <div class="thumb-image ">
+                <a  target="_blank"  href="seasons.html">
+            
+            <img class='img-responsive lazy'  data-src=http://cvc.vacations/uploads/0000/1/2019/12/28/caijw.jpg  alt=''>
+        </a>
+    </div>
+    <div class="location">
+                    <i class="icofont-paper-plane"></i>
+            Cairo
+            </div>
+    <div class="item-title">
+        <a  target="_blank"  href="seasons.html">
+            JW Marriott Hotel Cairo
+        </a>
+    </div>
+        <div class="service-review tour-review">
+        <div class="list-star">
+            <ul class="booking-item-rating-stars">
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+            </ul>
+            <div class="booking-item-rating-stars-active" style="">
+                <ul class="booking-item-rating-stars">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                </ul>
             </div>
         </div>
-    </a>
-</div>                    </div>
+        
+    </div>
+
+</div>
+                            </div>
+                                                    <div class="col-lg-4 col-md-6">
+                                <div class="item-tour ">
+        <div class="thumb-image ">
+                <a  target="_blank"  href="seasons.html">
+            
+            <img class='img-responsive lazy'  data-src=http://cvc.vacations/uploads/0000/1/2019/12/28/59294-1201041931005534815-600.jpg  alt=''>
+        </a>
+    </div>
+    <div class="location">
+                    <i class="icofont-paper-plane"></i>
+            Cairo
+            </div>
+    <div class="item-title">
+        <a  target="_blank"  href="seasons.html">
+            Four Season First Residence
+        </a>
+    </div>
+        <div class="service-review tour-review">
+        <div class="list-star">
+            <ul class="booking-item-rating-stars">
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+            </ul>
+            <div class="booking-item-rating-stars-active" style="">
+                <ul class="booking-item-rating-stars">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+                            </div>
+                                                    <div class="col-lg-4 col-md-6">
+                                <div class="item-tour ">
+        <div class="thumb-image ">
+                <a  target="_blank"  href="seasons.html">
+            
+            <img class='img-responsive lazy'  data-src=http://cvc.vacations/uploads/0000/1/2019/12/28/1336750-four-seasons-nile-plaza-cairo-600.jpg  alt=''>
+        </a>
+    </div>
+    <div class="location">
+                    <i class="icofont-paper-plane"></i>
+            Cairo
+            </div>
+    <div class="item-title">
+        <a  target="_blank"  href="seasons.html">
+            Four Season at Cairo Nile Plaza
+        </a>
+    </div>
+        <div class="service-review tour-review">
+        <div class="list-star">
+            <ul class="booking-item-rating-stars">
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+            </ul>
+            <div class="booking-item-rating-stars-active" style="">
+                <ul class="booking-item-rating-stars">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+                            </div>
+                                                            </div>
+            </div>
+            <div class="bravo-pagination">
+                
+                                    <span class="count-string">Showing 1 - 8 of 8 Hotel</span>
                             </div>
         </div>
     </div>
-</div>
+</div> 
         </div>
-
-        <div class="container " style="padding-top: 40px;padding-bottom: 40px;">
-            <div class="blog-content">
-                
-
-
-            </div>
-        </div>
-            <div class="bravo_footer">
+    </div>
+        <div class="bravo_footer">
     <div class="mailchimp">
         <div class="container">
             <div class="row">
@@ -476,7 +895,7 @@ a.bravo-logo img{
                         </div>
                         <div class="col-xs-12 col-md-5 col-lg-6">
                             <form action="http://cvc.vacations/newsletter/subscribe" class="subcribe-form bravo-subscribe-form bravo-form">
-                                <input type="hidden" name="_token" value="rpIsegRg9AWQquQ8f0S0UzRjdI51mdPWVAwziRyx">                                <div class="form-group">
+                                <input type="hidden" name="_token" value="2Gg9TkMtiIgiwAQxgm7mFqD0Fv2CEfNMDW8OaGpw">                                <div class="form-group">
                                     <input type="text" name="email" class="form-control email-input" placeholder="Your Email">
                                     <button type="submit" class="btn-submit">Subscribe
                                         <i class="fa fa-spinner fa-pulse fa-fw"></i>
@@ -630,7 +1049,7 @@ a.bravo-logo img{
             </div>
             <div class="modal-body relative">
                 <form class="bravo-form-login" method="POST" action="http://cvc.vacations/login">
-    <input type="hidden" name="_token" value="rpIsegRg9AWQquQ8f0S0UzRjdI51mdPWVAwziRyx">    <div class="form-group">
+    <input type="hidden" name="_token" value="2Gg9TkMtiIgiwAQxgm7mFqD0Fv2CEfNMDW8OaGpw">    <div class="form-group">
         <input type="text" class="form-control" name="email" autocomplete="off" placeholder="Email address">
         <i class="input-icon fa fa-envelope-o"></i>
         <span class="invalid-feedback error error-email"></span>
@@ -674,7 +1093,7 @@ a.bravo-logo img{
             </div>
             <div class="modal-body">
                 <form class="form bravo-form-register" method="post">
-    <input type="hidden" name="_token" value="rpIsegRg9AWQquQ8f0S0UzRjdI51mdPWVAwziRyx">    <div class="row">
+    <input type="hidden" name="_token" value="2Gg9TkMtiIgiwAQxgm7mFqD0Fv2CEfNMDW8OaGpw">    <div class="row">
         <div class="col-lg-6 col-md-12">
             <div class="form-group">
                 <input type="text" class="form-control" name="first_name" autocomplete="off" placeholder="First Name">
@@ -770,86 +1189,7 @@ a.bravo-logo img{
 </form>            </div>
         </div>
     </div>
-</div>    <div id="cdn-browser-modal" class="modal fade">
-    <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-            <div id="cdn-browser" class="cdn-browser d-flex flex-column" v-cloak>
-                <div class="files-nav flex-shrink-0">
-                    <div class="d-flex justify-content-between">
-                        <div class="col-left d-flex align-items-center">
-                            <div class="filter-item">
-                                <input type="text" placeholder="Search file name...." class="form-control" v-model="filter.s" @keyup.enter="filter.page = 1;reloadLists()">
-                            </div>
-                            <div class="filter-item">
-                                <button class="btn btn-default" @click="filter.page = 1;reloadLists()">
-                                    <i class="fa fa-search"></i> Search</button>
-                            </div>
-                            <div class="filter-item">
-                                <small><i>Total: {{total}} files</i></small>
-                            </div>
-                        </div>
-                        <div class="col-right">
-                            <i class="fa-spin fa fa-spinner icon-loading"></i>
-                            <button class="btn btn-success btn-pick-files">
-                                <span><i class="fa fa-upload"></i> Upload</span>
-                                <input multiple type="file" name="files[]" ref="files">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="upload-new" v-show="showUploader" display="none">
-                    <input type="file" name="filepond[]" class="my-pond">
-                </div>
-                <div class="files-list">
-                    <div class="files-wraps " :class="'view-'+viewType">
-                        <file-item v-for="(file,index) in files" :key="index" :view-type="viewType" :selected="selected" :file="file" v-on:select-file="selectFile"></file-item>
-                    </div>
-                    <p class="no-files-text text-center" v-show="!total && apiFinished" style="display: none">No file found</p>
-                    <div class="text-center" v-if="totalPage > 1">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item" :class="{disabled:filter.page <= 1}">
-                                    <a class="page-link" v-if="filter.page <=1">Previous</a>
-                                    <a class="page-link" href="#" v-if="filter.page > 1" v-on:click="changePage(filter.page-1,$event)">Previous</a>
-                                </li>
-                                <li class="page-item" v-if="p >= (filter.page-3) && p <= (filter.page+3)" :class="{active: p == filter.page}" v-for="p in totalPage" @click="changePage(p,$event)">
-                                    <a class="page-link" href="#">{{p}}</a></li>
-                                <li class="page-item" :class="{disabled:filter.page >= totalPage}">
-                                    <a v-if="filter.page >= totalPage" class="page-link">Next</a>
-                                    <a href="#" class="page-link" v-if="filter.page < totalPage" v-on:click="changePage(filter.page+1,$event)">Next</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="browser-actions d-flex justify-content-between flex-shrink-0" v-if="selected.length">
-                    <div class="col-left" v-show="selected.length">
-                        <div v-if="selected && selected.length">
-                            <div class="count-selected">{{selected.length}} file selected</div>
-                            <div class="clear-selected" @click="selected=[]"><i>unselect</i></div>
-                        </div>
-                    </div>
-                    <div class="col-right" v-show="selected.length">
-                        <button class="btn btn-primary" :class="{disabled:!selected.length}" @click="sendFiles">Use file</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
-<script type="text/x-template" id="file-item-template">
-    <div class="file-item" :class="fileClass(file)">
-        <div class="inner" :class="{active:selected.indexOf(file.id) !== -1 }" @click="selectFile(file)" :title="file.file_name">
-            <div class="file-thumb" v-if="viewType=='grid'" v-html="getFileThumb(file)">
-            </div>
-            <div class="file-name">{{file.file_name}}</div>
-            <span class="file-checked-status" v-show="selected.indexOf(file.id) !== -1">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M186.301 339.893L96 249.461l-32 30.507L186.301 402 448 140.506 416 110z"/></svg>
-            </span>
-        </div>
-    </div>
-</script>
-
 
 <script src="libs/lazy-load/intersection-observer.js"></script>
 <script async src="libs/lazy-load/lazyload.min.js"></script>
@@ -869,14 +1209,15 @@ a.bravo-logo img{
 </script>
 <script src="libs/jquery-3.3.1.min.js"></script>
 <script src="libs/vue/vue.js"></script>
-<script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="module/media/js/browser.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
 <script src="libs/carousel-2/owl.carousel.min.js"></script>
 <script type="text/javascript" src="libs/daterange/moment.min.js"></script>
 <script type="text/javascript" src="libs/daterange/daterangepicker.min.js"></script>
-<script src="js/functions.js"></script>
-<script src="js/home.js"></script>
+<script src="http://cvc.vacations/js/functions.js"></script>
+<script src="http://cvc.vacations/js/home.js"></script>
 
+    <script type="text/javascript" src="libs/ion_rangeslider/js/ion.rangeSlider.min.js"></script>
+    <script type="text/javascript" src="module/tour/js/tour.js"></script>
     </div>
 </body>
 </html>
